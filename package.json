@@ -1,0 +1,17 @@
+{
+  "name": "repository-knex",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "database",
+    "repository",
+    "sql",
+    "pg",
+    "mysql"
+  ],
+  "author": "“Francisco <“franciscoviana862@gmail.com”>",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
