@@ -1,5 +1,5 @@
 {
-  "name": "repository-knex",
+  "name": "@francisco1030/repository-knex",
   "version": "0.0.1",
   "main": "src/index.js",
   "license": "MIT",
