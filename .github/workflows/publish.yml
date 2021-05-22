@@ -15,5 +15,6 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://npm.pkg.github.com'
         scope: '@francisco1030'
+    - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
