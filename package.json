@@ -4,8 +4,7 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest  --colors --noStackTrace --passWithNoTests --runInBand",
-    "test:ci": "npm test -- --coverage --silent --forceExit"
+    "test": "jest  --colors --noStackTrace --passWithNoTests --runInBand"
   },
   "keywords": [
     "database",
