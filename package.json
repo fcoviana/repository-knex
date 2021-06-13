@@ -1,8 +1,12 @@
 {
   "name": "@francisco1030/repository-knex",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "src/index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "jest  --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:ci": "npm test -- --coverage --silent --forceExit"
+  },
   "keywords": [
     "database",
     "repository",
@@ -13,5 +17,8 @@
   "author": "“Francisco <“franciscoviana862@gmail.com”>",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }

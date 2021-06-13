@@ -13,7 +13,7 @@ module.exports = class Repository {
    */
   async findWhere(where) {
     try {
-      const [foundItem] = await this.db.transaction((trx) => trx(this.table).where(where));
+      const [foundItem] = await this.db(this.table).where(where);
       const formattedItem = new this.entity(foundItem);
 
       return response(true, formattedItem);
@@ -27,7 +27,7 @@ module.exports = class Repository {
    */
   async fetchAll() {
     try {
-      const data = await this.db.transaction((trx) => trx(this.table));
+      const data = await this.db(this.table);
 
       return response(true, data);
     } catch (error) {
@@ -41,7 +41,7 @@ module.exports = class Repository {
    */
   async create(object) {
     try {
-      await this.db.transaction((trx) => trx(this.table).insert(object));
+      await this.db(this.table).insert(object);
 
       return response(true, object);
     } catch (error) {
@@ -56,7 +56,7 @@ module.exports = class Repository {
   async update(object) {
     try {
       const { id } = object;
-      await this.db.transaction((trx) => trx(this.table).where({ id }).update(object));
+      await this.db(this.table).where({ id }).update(object);
 
       return response(true, object);
     } catch (error) {
@@ -70,7 +70,7 @@ module.exports = class Repository {
    */
   async destroy(id) {
     try {
-      await this.db.transaction((trx) => trx(this.table).where({ id }).del());
+      await this.db(this.table).where({ id }).del();
 
       return response(true, {});
     } catch (error) {
@@ -86,7 +86,7 @@ module.exports = class Repository {
     try {
       const { id } = object;
       Object.assign(object, { deletedAt: new Date().toLocaleString() });
-      await this.db.transaction((trx) => trx(this.table).where({ id }).update(object));
+      await this.db(this.table).where({ id }).update(object);
 
       return response(true, object);
     } catch (error) {
