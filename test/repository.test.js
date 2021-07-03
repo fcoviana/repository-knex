@@ -23,12 +23,12 @@ const makeSut = () => {
 
 describe("Repository", () => {
   const { sut, data } = makeSut();
-  jest.spyOn(sut, "create");
-  jest.spyOn(sut, "fetchAll");
-  jest.spyOn(sut, "findWhere");
-  jest.spyOn(sut, "update");
-  jest.spyOn(sut, "delete");
-  jest.spyOn(sut, "destroy");
+  jest.spyOn(sut, sut.create.name);
+  jest.spyOn(sut, sut.fetchAll.name);
+  jest.spyOn(sut, sut.findWhere.name);
+  jest.spyOn(sut, sut.update.name);
+  jest.spyOn(sut, sut.delete.name);
+  jest.spyOn(sut, sut.destroy.name);
 
   test("Should call create", async () => {
     await sut.create(data);
