@@ -12,6 +12,6 @@
  * @param {any} error
  * @return {QueryBuilderResponse}
  */
-exports.response = (success, data = null, error = null) => {
+exports.response = ({ success, data = null, error = false }) => {
   return { success, data, error };
 };
