@@ -21,12 +21,12 @@ registry=https://npm.pkg.github.com/francisco1030
 ###### Install package
 
 ```bash
-$ npm install @francisco1030/repository-knex
+$ npm install @fcoviana/repository-knex
 ```
 
 ## License
 
-[MIT](https://github.com/Francisco1030/repository-knex/blob/master/LICENSE)
+[MIT](https://github.com/fcoviana/repository-knex/blob/master/LICENSE)
 
-[license-badge]: https://img.shields.io/github/license/francisco1030/repository-knex.svg
+[license-badge]: https://img.shields.io/github/license/fcoviana/repository-knex.svg
 [license-url]: https://opensource.org/licenses/MIT
